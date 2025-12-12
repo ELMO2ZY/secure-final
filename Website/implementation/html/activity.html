@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity - SecureShare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <nav class="dashboard-nav">
+            <div class="dashboard-nav-left">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="logo-text">SecureShare</div>
+                        <div style="font-size: 12px; color: #666;">Enterprise File Sharing & DLP</div>
+                    </div>
+                </div>
+                <a href="index.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    Logout
+                </a>
+                <div class="notification-bell">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-dot"></span>
+                </div>
+                <a href="settings.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24"></path>
+                    </svg>
+                    Settings
+                </a>
+                <a href="activity.html" class="nav-item active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    Activity
+                </a>
+                <a href="files.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Files
+                </a>
+                <a href="upload.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    Upload
+                </a>
+                <a href="dashboard.html" class="nav-item">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Dashboard
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard-content">
+        <h1 class="page-title">Activity Log</h1>
+        <p class="page-subtitle">Monitor all file access and security events</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 16px; margin-bottom: 24px;">
+            <div class="select-wrapper">
+                <select>
+                    <option>All Risk Levels</option>
+                    <option>Low Risk</option>
+                    <option>Medium Risk</option>
+                    <option>High Risk</option>
+                </select>
+            </div>
+            <div class="select-wrapper">
+                <select>
+                    <option>All Actions</option>
+                    <option>Download</option>
+                    <option>View</option>
+                    <option>Upload</option>
+                    <option>Share</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" placeholder="Search files or users..." style="padding-left: 40px;">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="M21 21l-4.35-4.35"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="metrics-grid" style="margin-bottom: 30px;">
+            <div class="metric-card">
+                <div class="metric-value" style="color: #065f46;">1</div>
+                <div class="metric-label">Downloads</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" style="color: #991b1b;">1</div>
+                <div class="metric-label">Access Denied</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" style="color: #991b1b;">1</div>
+                <div class="metric-label">High Risk</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">5</div>
+                <div class="metric-label">Total Events</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">Recent Activity</h3>
+            <p style="color: #666; font-size: 14px; margin-bottom: 20px;">events found 5</p>
+
+            <div class="activity-item">
+                <span class="risk-badge risk-low">low risk</span>
+                <div class="activity-details">
+                    <div style="font-weight: 600; margin-bottom: 4px;">Q4_Financial_Report.pdf</div>
+                    <div style="color: #666; font-size: 14px;">download by john@company.com</div>
+                    <div class="activity-location">San Francisco, CA • IP: 192.168.1.105 • Oct 18, 10:30 AM</div>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+            </div>
+
+            <div class="activity-item">
+                <span class="risk-badge risk-low">low risk</span>
+                <div class="activity-details">
+                    <div style="font-weight: 600; margin-bottom: 4px;">Product_Roadmap_2026.pptx</div>
+                    <div style="color: #666; font-size: 14px;">view by jane@company.com</div>
+                    <div class="activity-location">San Francisco, CA • IP: 192.168.1.112 • Oct 18, 09:15 AM</div>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+            </div>
+
+            <div class="activity-item">
+                <span class="risk-badge risk-high">high risk</span>
+                <div class="activity-details">
+                    <div style="font-weight: 600; margin-bottom: 4px;">Q4_Financial_Report.pdf</div>
+                    <div style="color: #991b1b; font-size: 14px; margin-bottom: 8px;">access denied by unknown@external.com</div>
+                    <div style="background: #fee2e2; padding: 8px; border-radius: 6px; font-size: 12px; color: #991b1b; display: flex; align-items: center; gap: 8px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        Unauthorized access attempt blocked
+                    </div>
+                    <div class="activity-location" style="margin-top: 8px;">Unknown Location • IP: 45.123.67.89 • Oct 18, 08:45 AM</div>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </div>
+
+            <div class="activity-item">
+                <span class="risk-badge risk-medium">medium risk</span>
+                <div class="activity-details">
+                    <div style="font-weight: 600; margin-bottom: 4px;">Product_Roadmap_2026.pptx</div>
+                    <div style="color: #666; font-size: 14px;">share by admin@company.com</div>
+                    <div class="activity-location">San Francisco, CA • IP: 192.168.1.100 • Oct 17, 3:20 PM</div>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+            </div>
+
+            <div class="activity-item">
+                <span class="risk-badge risk-low">low risk</span>
+                <div class="activity-details">
+                    <div style="font-weight: 600; margin-bottom: 4px;">Employee_Contracts.zip</div>
+                    <div style="color: #666; font-size: 14px;">upload by hr@company.com</div>
+                    <div class="activity-location">San Francisco, CA • IP: 192.168.1.105 • Oct 17, 2:15 PM</div>
+                </div>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+    <script>
+        // Enhanced Activity Page Animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate metric cards with stagger
+            const metricCards = document.querySelectorAll('.metric-card');
+            metricCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate-in');
+                }, index * 100);
+            });
+
+            // Animate activity items with stagger
+            const activityItems = document.querySelectorAll('.activity-item');
+            activityItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('animate-in');
+                }, 300 + (index * 100));
+            });
+
+            // Add hover effect to activity icons
+            activityItems.forEach(item => {
+                const icon = item.querySelector('svg');
+                if (icon) {
+                    item.addEventListener('mouseenter', function() {
+                        icon.style.transform = 'scale(1.2) rotate(5deg)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    });
+                    item.addEventListener('mouseleave', function() {
+                        icon.style.transform = 'scale(1) rotate(0deg)';
+                    });
+                }
+            });
+
+            // Add ripple effect to metric cards
+            metricCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple');
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+
+            // Scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe card for scroll animations
+            const card = document.querySelector('.card');
+            if (card) {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            }
+        });
+    </script>
+    <style>
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Animated background gradient */
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #f5f7fa 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</body>
+</html>
+
